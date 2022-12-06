@@ -14,6 +14,9 @@ public class Intro {
         //variable name for storing the name entered
         String name = scanner.nextLine();
 
+        //Compile error example:
+        //Stirng asd = "asdas";
+
         //outputs the text in the console
         System.out.println("Please enter your age:");
         //variable age for storing the age entered
