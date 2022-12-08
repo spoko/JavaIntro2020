@@ -10,6 +10,8 @@ public class VariableTest {
         float piFloat = 3.14f;
         boolean isEven = false;
         boolean iseven = true;
+        //wrapper class
+        Integer someInt = 20;
 
         //Object - referent type
         Dog frenchBulldog = new Dog();// using default constructor will be learned latter
@@ -39,5 +41,7 @@ public class VariableTest {
         System.out.println(someString);
 
         System.out.printf("Age is: %d", age);
+
+        System.out.println(frenchBulldog == frenchBulldog2);
     }
 }
