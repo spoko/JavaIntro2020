@@ -8,6 +8,6 @@ public class ArrayListDemo {
         cities.add("Sofia");
         cities.add("Plovdiv");
         cities.add(0, "Varna");
-        System.out.println(cities);
+        System.out.printf("Cities are: %s and the count is: %d", cities, cities.size());
     }
 }
