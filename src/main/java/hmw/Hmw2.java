@@ -1,4 +1,4 @@
-package hmw2;
+package hmw;
 
 import java.util.Scanner;
 
