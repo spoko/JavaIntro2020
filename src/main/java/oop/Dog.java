@@ -3,9 +3,6 @@ package oop;
 public class Dog extends Animal {
     //instance variable
     private String breed;
-//    private int age;
-//    private String name;
-//    private float weight;
 
     public String getBreed() {
         return breed;
@@ -19,49 +16,51 @@ public class Dog extends Animal {
         }
     }
 
-//    public int getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(int age) {
-//        if (age > 0){
-//            this.age = age;
-//        }else {
-//            System.out.println("ERROR: Invalid input data for Age.");
-//        }
-//    }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        if (!name.isEmpty() && !name.isBlank()){
-//            this.name = name;
-//        }else {
-//            System.out.println("ERROR: Invalid input data for Name.");
-//        }
-//    }
-//
-//    public float getWeight() {
-//        return weight;
-//    }
-//
-//    public void setWeight(float weight) {
-//        if(weight > 0){
-//            this.weight = weight;
-//        }else {
-//            System.out.println("ERROR: Invalid input data for Name.");
-//        }
-//    }
-
     //method
     public void bark(){
         System.out.println("Bau bau");
     }
 
     public void printData(){
-        System.out.printf("Name is: %s, breed is: %s, age is: %d, weight is: %.3f\n", super.getName(),
-                breed, super.getAge(), super.getWeight());
+        System.out.printf("Name is: %s, breed is: %s, age is: %d, weight is: %.3f, address is: %s\n", super.getName(),
+                breed, super.getAge(), super.getWeight(), super.getAddress().toString());
+    }
+
+    public static void main(String[] args) {
+        Test.someTestMethod("Hello from Dog Class");
+        Dog.eat(Dog.getDogFood(2));
+    }
+
+    public static void eat(String food){
+        System.out.println("Eating " + food);
+    }
+
+    public static String getDogFood(int value){
+        String result = "";
+
+        switch (value){
+            case 1:
+                result = "granuli";
+                break;
+            case 2:
+                result = "pastet";
+                break;
+            case 3:
+                result = "coocked";
+                break;
+            default:
+                result = "Invalid entry";
+        }
+
+        return result;
+    }
+
+    public static int getNumber(int a, int b, int c){
+        int result = (a + b + c) / 3;
+        return result;
+    }
+
+    public static boolean checkEquals(int a, int b){
+        return a == b;
     }
 }

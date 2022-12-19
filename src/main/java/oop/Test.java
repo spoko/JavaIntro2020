@@ -4,6 +4,13 @@ public class Test {
     public static void main(String[] args) {
         Dog dog1 = new Dog();
         Cat cat1 = new Cat();
+
+        Address dogAddress = new Address();
+        System.out.println(dogAddress);
+        dogAddress.setPostalCode(1000);
+        dogAddress.setCity("Sofia");
+        dogAddress.setStreetName("G. M. Dimitrov");
+
         cat1.setBreed("Some");
         cat1.setAge(12);
         cat1.setHasTail(true);
@@ -14,6 +21,7 @@ public class Test {
         dog1.setName("Morti");
         dog1.setAge(22);
         dog1.setWeight(15.04f);
+        dog1.setAddress(dogAddress);
 
         dog1.printData();
 
@@ -23,6 +31,13 @@ public class Test {
         dog1.bark();
 
         cat1.printData();
+        cat1.printData(true);
         cat1.mau();
+
+        someTestMethod("Hello world");
+    }
+
+    public static void someTestMethod(String param){
+        System.out.println(param);
     }
 }
