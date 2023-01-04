@@ -3,11 +3,16 @@ package oop;
 public class Cat extends Animal{
     private String breed;
 
+    public Cat (int age, String name, float weight, boolean hasTail, String breed){
+        super(age, name, weight, hasTail);
+        setBreed(breed);
+    }
+
     public String getBreed() {
         return breed;
     }
 
-    public void setBreed(String breed) {
+    private void setBreed(String breed) {
         if (!breed.isEmpty() && !breed.isBlank()){
             this.breed = breed;
         }else {

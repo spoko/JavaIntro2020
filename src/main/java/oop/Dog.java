@@ -3,12 +3,28 @@ package oop;
 public class Dog extends Animal {
     //instance variable
     private String breed;
+//default constructor
+//    public Dog (){
+//        breed = "frenchie";
+//    }
+
+    //constructor with params
+    public Dog (int age, String name, float weight, boolean hasTail, String breed){
+        super(age, name, weight, hasTail);
+        setBreed(breed);
+    }
+
+    //copy constructor
+    public Dog(Dog dog){
+        super(dog.getAge(), dog.getName(), dog.getWeight(), dog.getHasTail());
+        setBreed(dog.getBreed());
+    }
 
     public String getBreed() {
         return breed;
     }
 
-    public void setBreed(String breed) {
+    private void setBreed(String breed) {
         if (!breed.isEmpty() && !breed.isBlank()){
             this.breed = breed;
         }else {
@@ -55,12 +71,24 @@ public class Dog extends Animal {
         return result;
     }
 
-    public static int getNumber(int a, int b, int c){
+    public static int calculateAverage(int a, int b, int c){
         int result = (a + b + c) / 3;
         return result;
     }
 
     public static boolean checkEquals(int a, int b){
         return a == b;
+    }
+
+    public void suggestFood(WeekDays day){
+        switch (day){
+            case Monday:
+                System.out.println("For today best food will be fish");
+                break;
+                //rest of the days
+            case Sunday:
+                System.out.println("For today best food will be lamb");
+                break;
+        }
     }
 }

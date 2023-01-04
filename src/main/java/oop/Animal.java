@@ -7,6 +7,13 @@ public class Animal extends AnimalActions {
     private boolean hasTail;
     private Address address;
 
+    public Animal (int age, String name, float weight, boolean hasTail){
+        setAge(age);
+        setName(name);
+        setWeight(weight);
+        setHasTail(hasTail);
+    }
+
     public boolean isHasTail() {
         return hasTail;
     }
@@ -43,7 +50,7 @@ public class Animal extends AnimalActions {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         if (!name.isEmpty() && !name.isBlank()){
             this.name = name;
         }else {
