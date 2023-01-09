@@ -52,6 +52,18 @@ public class Person {
             return;
         }
 
+        String itemNames = "";
+        int index = bagOfProducts.size();
+        for (Product product : bagOfProducts){
+            if (index > 1){
+                itemNames += product.getName() + ", ";
+                index--;
+            }else {
+                itemNames += product.getName();
+                index--;
+            }
+        }
 
+        System.out.println(this.getName() + " - " + itemNames);
     }
 }
