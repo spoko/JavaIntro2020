@@ -31,5 +31,35 @@ public class Intro {
         }else {
             System.out.println(name + " is NOT able to drink");
         }
+
+        int num1 = 435;
+        int num2 = 453;
+        int num3 = 456;
+
+        String MyName = "My name is <myName>";
+        System.out.println("Please enter your name:");
+
+
+        name = scanner.nextLine();
+
+        System.out.println(MyName.replace("<myName>", name));
+
+        //Compare two strings
+        System.out.println("Please enter the first string to compare:");
+        String FirstString = scanner.nextLine();
+
+        System.out.println("Please enter the second string to compare:");
+        String SecondString = scanner.nextLine();
+
+        System.out.println(FirstString.compareTo(SecondString) == 0 ? "the two strings are the same" : "the two strings are different" );
+
+    }
+
+    public static int maxNumber(int a, int b){
+        if (a > b){
+            return a;
+        }else{
+            return b;
+        }
     }
 }
