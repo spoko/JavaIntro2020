@@ -14,9 +14,14 @@ public class Test {
         QAEmployee qa2 = new QAEmployee("Mihail", "male", "C#",
                 "01/01/20", 1000, "IT", false);
 
+        //AbstractDemo abs = new AbstractDemo(); not possible to have instance/ object from an abstract class
+
         dev1.printSalary(500); //1750;
         dev2.printSalary(500); //1500;
         qa1.printSalary(500); //2000;
         qa2.printSalary(500); //1500;
+        System.out.println(RemoteEmployee.isRemote());
+        dev1.drinkCoffee();
+        dev1.drinkCoffee("non-caffeine");
     }
 }

@@ -29,4 +29,14 @@ public class DeveloperEmp extends Employee {
             super.printSalary(bonus);
         }
     }
+
+
+    public void drinkCoffee(){
+        System.out.println("I am drinking coffee");
+    }
+
+
+    protected void drinkCoffee(String coffeeType){
+        System.out.printf("I am drinking %s coffee", coffeeType);
+    }
 }

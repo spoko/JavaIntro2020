@@ -94,7 +94,7 @@ public class Employee {
     }
 
     //internal method for this class
-    private double calculateSalary(double bonus){
+    double calculateSalary(double bonus){
         if (bonus > 300){
             bonus = bonus - (bonus * 0.1); //-10% tax - например ново законово изискване - лесно добавяме на централизирано място
             //и всички наследници вече изчисляват по правилния начин без да се налага промяна по/ в тях.
@@ -104,6 +104,6 @@ public class Employee {
 
     //accessible from the outside
     public void printSalary(double bonus){
-        System.out.printf("Salary for this employee is: %.2f.\n", this.calculateSalary(bonus));
+        System.out.printf("Salary from Employee: is: %.2f.\n", this.calculateSalary(bonus));
     }
 }
